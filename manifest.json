@@ -2,18 +2,17 @@
     "manifest_version": 3,
     "name": "Dark Mode Video",
     "version": "1.0",
-    "permissions": ["activeTab"],
+    "permissions": ["activeTab", "scripting"],
     "background": {
       "service_worker": "background.js"
     },
-    "action": {
-      "default_popup": "popup.html"
-    },
+    "action": {},
     "content_scripts": [
       {
         "matches": ["*://*.panopto.com/*"],
-        "js": ["contentScript.js"]
+        "js": ["contentScript.js"],
+        "run_at": "document_idle"
       }
     ]
-}
+  }
   
