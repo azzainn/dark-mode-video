@@ -3,4 +3,3 @@ chrome.action.onClicked.addListener((tab) => {
       action: "toggleDarkMode"
     });
   });
-  
